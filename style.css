@@ -1362,7 +1362,7 @@ body {
     }
 }
 .carousel-arrow,
-.carousel-arrow.left,
-.carousel-arrow.right {
+ {
     display: none !important;
 }
+
