@@ -427,76 +427,6 @@
         }
       </script>
   
-<script>
-    const carouselWrapper = document.querySelector('.carousel-wrapper');
-const images = document.querySelectorAll('.partner-image');
-const leftArrow = document.querySelector('.carousel-arrow.left');
-const rightArrow = document.querySelector('.carousel-arrow.right');
-
-let currentIndex = 0;
-const totalImages = images.length;
-const visibleImages = 4; // Show 4 images at a time
-const imageWidth = images[0].offsetWidth + 22; // Image width + gap between them
-let direction = 1; // 1 for forward, -1 for backward
-let autoSlide; // Variable to hold the setInterval
-
-function updateCarousel() {
-    const offset = currentIndex * imageWidth;
-    carouselWrapper.style.transform = `translateX(-${offset}px)`;
-}
-
-function slideToNext() {
-    if (currentIndex < totalImages - visibleImages) {
-        currentIndex++;
-    } else {
-        currentIndex = 0; // Loop back to the first image
-    }
-    updateCarousel();
-}
-
-function slideToPrevious() {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = totalImages - visibleImages; // Loop back to the last set of images
-    }
-    updateCarousel();
-}
-
-function startAutoSlide() {
-    stopAutoSlide(); // Clear any existing interval
-    autoSlide = setInterval(slideToNext, 3000);
-}
-
-function stopAutoSlide() {
-    clearInterval(autoSlide);
-}
-
-// Event listeners for arrows
-rightArrow.addEventListener('click', () => {
-    direction = 1; // Set direction to right
-    stopAutoSlide(); // Stop the auto slide
-    slideToNext(); // Manually move to the next image
-});
-
-leftArrow.addEventListener('click', () => {
-    direction = -1; // Set direction to left
-    stopAutoSlide(); // Stop the auto slide
-    slideToPrevious(); // Manually move to the previous image
-});
-
-// Start auto slide on load
-startAutoSlide();
-
-// Ensure the correct width of the carousel wrapper based on total images and gap
-window.addEventListener('resize', () => {
-    // Update imageWidth on window resize
-    const imageWidth = images[0].offsetWidth + 20; // recalculate width
-    updateCarousel(); // Recalculate position on resize
-});
-
-</script>
-
 
  
 
@@ -625,6 +555,7 @@ form.addEventListener('submit', e => {
 </script>
 </body>
 </html>
+
 
 
 
