@@ -67,8 +67,26 @@ body, html {
     font-family: Arial, sans-serif;
     
 }
-  
+/* Partners Horizontal Scroll */
+
 .partners-carousel {
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px;
+}
+
+.partner-image {
+    flex: 0 0 auto;
+    width: 220px;
+}
+  
+/* .partners-carousel {
     position: relative;
     margin-bottom: 40px;
     padding-bottom: 100px;
@@ -94,7 +112,7 @@ body, html {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-}
+} */
 
 .partner-image img {
     width: 100%;
@@ -1314,4 +1332,5 @@ body {
 .carousel-arrow {
     display: none !important;
 }
+
 
