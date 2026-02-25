@@ -67,40 +67,72 @@ body, html {
     font-family: Arial, sans-serif;
     
 }
-/* Partners Horizontal Scroll */
-
-.partners-carousel {
-    overflow: hidden;
-}
-
-.carousel-wrapper {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 20px;
-    padding: 20px;
-}
-
-.partner-image {
-    flex: 0 0 auto;
-    width: 220px;
-}
-  
-/* .partners-carousel {
+   /* .partners-carousel {
     position: relative;
     margin-bottom: 40px;
     padding-bottom: 100px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%; 
+    margin: 0 auto;
+}
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px; 
+    width: max-content; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.partner-image {
+    flex: 0 0 auto; 
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; 
+    overflow: hidden;
+    
+}
+.partner-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
+    
+}
+.carousel-arrow {
+    font-size: 24px;
+    color: #00bcd4;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+} */
+.partners-carousel {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    width: 80%;
     margin: 0 auto;
 }
 
 .carousel-wrapper {
     display: flex;
-    /* transition: transform 0.5s ease-in-out; */
+    transition: transform 0.5s ease-in-out;
     gap: 20px;
-    overflow-x: auto;
-    scroll-behavior: smooth
     width: max-content;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -112,7 +144,7 @@ body, html {
     border-radius: 50%;
     overflow: hidden;
     position: relative;
-} */
+}
 
 .partner-image img {
     width: 100%;
@@ -138,7 +170,7 @@ body, html {
     opacity: 1;
 }
 
-/* .carousel-arrow {
+.carousel-arrow {
     font-size: 24px;
     color: #00bcd4;
     cursor: pointer;
@@ -158,7 +190,7 @@ body, html {
 
 .carousel-arrow.right {
     right: 10px;
-} */
+}
 .page-container {
     display: flex;
     justify-content: space-between;
@@ -1329,8 +1361,3 @@ body {
         background-color: white; /* Visible cursor */
     }
 }
-.carousel-arrow {
-    display: none !important;
-}
-
-
