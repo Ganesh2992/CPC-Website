@@ -1361,6 +1361,8 @@ body {
         background-color: white; /* Visible cursor */
     }
 }
-.carousel-arrow {
+.carousel-arrow,
+.carousel-arrow.left,
+.carousel-arrow.right {
     display: none !important;
 }
